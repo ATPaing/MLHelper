@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host | MLHelper</title>
+    <!-- fav icon  -->
+    <link rel="icon" type="image/x-icon" href="../src/images/logo.png">
+    <!-- add poppins font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <!-- var css  -->
+    <link rel="stylesheet" href="../styles/var.css">
+    <!-- reset css -->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <!-- nav css  -->
+    <link rel="stylesheet" href="../styles/nav.css">
+    <!-- create room css  -->
+    <link rel="stylesheet" href="../styles/createRoom.css">
+</head>
+
+<body>
+    <main class="create_room_main">
+        <section class="host-left">
+            <div class="main_screen" id="main_screen">
+                <img id="main_screen-bg" class="main_screen-bg" src="../src/images/Celestial_Palace_Map 1.png" alt="map" >
+                <canvas id="canvas" class="canvas_one"></canvas>
+                <canvas id="copy_canvas" class="canvas_two"></canvas>
+                <p class="teammate sticker t-exp">Exp</p>
+                <p class="teammate sticker t-gl">GL</p>
+                <p class="teammate sticker t-mid">Mid</p>
+                <p class="teammate sticker t-rm">RM</p>
+                <p class="teammate sticker t-jgn">Jgn</p>
+                <p class="enemy sticker e-exp">Exp</p>
+                <p class="enemy sticker e-gl">GL</p>
+                <p class="enemy sticker e-mid">Mid</p>
+                <p class="enemy sticker e-rm">RM</p>
+                <p class="enemy sticker e-jgn">Jgn</p>
+            </div>
+    
+            <div class="tools">
+                <div class="tool">
+                    <img src="../src/images/tools/draw.svg" alt="pencil"/>
+                    <p>Penil</p>
+                </div>
+                <div class="tool">
+                    <img src="../src/images/tools/erase.svg" alt="eraser"/>
+                    <p>Erase</p>
+                </div>
+                <div class="tool">
+                    <img src="../src/images/tools/move.svg" alt="move"/>
+                    <p>move</p>
+                </div>
+                <div class="tool">
+                    <img src="../src/images/tools/reset.svg" alt="reset"/>
+                    <p>reset</p>
+                </div>
+                <div class="tool">
+                    <img src="../src/images/tools/save.svg" alt="save"/>
+                    <p>save</p>
+                </div>
+                <div class="red color">
+                    <div class="red_color_bucket color_bucket"></div>
+                    <p>red</p>
+                </div>
+                <div class="green color">
+                    <div class="green_color_bucket color_bucket"></div>
+                    <p>green</p>
+                </div>
+                <div class="blue color">
+                    <div class="blue_color_bucket color_bucket"></div>
+                    <p>blue</p>
+                </div>
+                <div class="custom">
+                    <input id="color_picker" class="color_picker color_bucket" type="color" aria-label="customize color">
+                    <p>Customize</p>
+                </div>
+            </div>
+        </section>
+        <section class="host-right">
+            <!-- <div class="time">
+                <span class="time_description">Time:</span>
+                <input class="time_input" type="number" aria-label="minute input" value="00">
+                <span>minute(s)</span>
+                <span>:</span>
+                <input class="time_input" type="number" aria-label="second input" value="00">
+                <span>second(s)</span>
+            </div> -->
+            <p>Room Id: <span id="roomID" class="roomId"></span></p>
+            <div class="close_room">
+                <a id="closeRoom">Close room</a>
+            </div>
+            <div>
+                <p>Players Online:</p>
+                <div id="Join_Players" class="join_players">
+    
+    
+                </div>
+            </div>
+            <div>
+                <p>Saved snaps</p>
+                <div id="snapCollection" class="snaps">
+    
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <section id='model' class="model">
+        <div class="close_room_model">
+            <p id="closeRoomContent">Closing room. Please wait </p>
+        </div>
+        
+    </section>
+</body>
+
+<!-- project scripts  -->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBdOiBP5jHmJHZATOcWAJVYGBkTbrag9As",
+        authDomain: "mlhelper-6cc44.firebaseapp.com",
+        projectId: "mlhelper-6cc44",
+        storageBucket: "mlhelper-6cc44.appspot.com",
+        messagingSenderId: "1078072164631",
+        appId: "1:1078072164631:web:05c562ab02bfb32ccab752",
+        measurementId: "G-1HMJ32DFZZ"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+
+<script src="../functions/drag-drop.js" type="module" ></script>
+<script src="../functions/closeRoom.js" type="module" ></script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | MLHelper</title>
+    <!-- fav icon  -->
+    <link rel="icon" type="image/x-icon" href="../src/images/logo.png">
+    <!-- add poppins font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">`
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <!-- var css  -->
+    <link rel="stylesheet" href="../styles/var.css">
+    <!-- reset css -->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <!-- sign in css  -->
+    <link rel="stylesheet" href="../styles/signIn.css">
+</head>
+<body>
+    <form method="post" class="signIn">
+        <h1>Sign In</h1>
+        <div class="username user_input">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required/>            
+        </div>
+        <div class="password user_input">
+            <label for="pwd">Password:</label>
+            <input type="Password" name="password" id="pwd" required/>            
+        </div>
+        <button type="submit">Submit</button>
+        <a href="./register.html" class="register">Register</a>
+        <p class="error_msg" id="error_msg"></p>
+    </form>
+</body>
+<!-- firebase cdn -->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBdOiBP5jHmJHZATOcWAJVYGBkTbrag9As",
+        authDomain: "mlhelper-6cc44.firebaseapp.com",
+        projectId: "mlhelper-6cc44",
+        storageBucket: "mlhelper-6cc44.appspot.com",
+        messagingSenderId: "1078072164631",
+        appId: "1:1078072164631:web:05c562ab02bfb32ccab752",
+        measurementId: "G-1HMJ32DFZZ"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+<script src="../functions/auth.js" type="module"></script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | MLHelper</title>
+    <!-- fav icon  -->
+    <link rel="icon" type="image/x-icon" href="../src/images/logo.png">
+    <!-- add poppins font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <!-- var css  -->
+    <link rel="stylesheet" href="../styles/var.css">
+    <!-- reset css -->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <!-- register css  -->
+    <link rel="stylesheet" href="../styles/register.css">
+</head>
+<body>
+    <form id="register_form" method="POST">
+        <h1>Register !</h1>
+        <div class="upload_wrapper">
+            <input type="file" accept="image/jpeg, image/png, image/jpg" aria-label="upload image" class="imgUploader" id="imgUploader">
+            <img src="../src/images/camera.png" alt="add photo" class="upload_logo">
+            <img id="show_profile" class="show_profile" src="" alt="user profile">
+        </div>
+        <div class="username user_input">
+            <label for="username">Email:</label>
+            <input type="email" id="username" name="email" required/>            
+        </div>
+        <div class="name user_input">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name" required/>            
+        </div>
+        <div class="password user_input">
+            <label for="pwd">Password:</label>
+            <input type="Password" id="pwd" name="password" required/>            
+        </div>
+        <div class="password user_input">
+            <label for="cpwd">Confirm password:</label>
+            <input type="Password" id="cpwd" name="cpassword" required/>            
+        </div>
+        <button type="submit">Submit</button>
+        <a href="./signIn.html" class="register">Sign-In</a>
+        <p class="error_msg" id="error_msg"></p>
+    </form>
+    <div class="prompt" id="prompt">
+        <p></p>
+    </div>
+</body>
+<!-- firebase cdn -->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBdOiBP5jHmJHZATOcWAJVYGBkTbrag9As",
+        authDomain: "mlhelper-6cc44.firebaseapp.com",
+        projectId: "mlhelper-6cc44",
+        storageBucket: "mlhelper-6cc44.appspot.com",
+        messagingSenderId: "1078072164631",
+        appId: "1:1078072164631:web:05c562ab02bfb32ccab752",
+        measurementId: "G-1HMJ32DFZZ"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+<script src="../functions/register.js" type="module"></script>
+</html>

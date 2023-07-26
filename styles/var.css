@@ -1,0 +1,5 @@
+:root{
+    --layout-padding: 3em;
+    --theme-bg-clr: linear-gradient(180deg, rgba(147, 189, 251, 0.28) 2.10%, #D4E1F5 38.45%, #D4E1F5 72.32%, rgba(147, 189, 251, 0.40) 98.96%);
+    --box-shadow: 0 2px 5px rgb(82, 82, 82);
+}

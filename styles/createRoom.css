@@ -1,0 +1,313 @@
+.create_room_main{
+    display: flex;
+    gap: 1em;
+}
+.host-left,.host-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    width: 50vw;
+    height: max-content;
+}
+.host-right{
+    width: 50vw;
+}
+.main_screen{
+    position: relative;
+    /* min-width: 450px;
+    min-height: 450px; */
+    aspect-ratio: 4/3;
+    z-index: 0;
+}
+.main_screen-bg{
+    position: absolute;
+    inset: 0;
+    /* object-fit: cover; */
+    width: 100%;
+    height: 100%; 
+    z-index: -4;  
+}
+.canvas_one{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    cursor: url(../src/images/tools/move-cursor.svg), auto;
+    /* background-color: white; */
+}
+.canvas_two{
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.sticker{
+    position: absolute;
+    width: max-content;
+    font-size: 0.5rem;
+    font-weight: 500;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    cursor: url(../src/images/tools/move-cursor.svg), auto;
+    user-select: none;
+    z-index: -2; 
+}
+.teammate{
+    background-color: white;
+    color: black;
+}
+.enemy{
+    background-color: black;
+    color: white;
+}
+.t-exp{
+    left: 0;
+    top: 0;
+}
+.t-gl{
+    left: 0;
+    top: 30px;
+}
+.t-mid{
+    left: 0;
+    top: 60px;
+}
+.t-rm{
+    left: 0;
+    top: 90px;
+}
+.t-jgn{
+    left: 0;
+    top: 120px;
+}
+.e-exp{
+    left: 0;
+    top: 150px;
+}
+.e-gl{
+    left: 0;
+    top: 180px;
+}
+.e-mid{
+    left: 0;
+    top: 210px;
+}
+.e-rm{
+    left: 0;
+    top: 240px;
+}
+.e-jgn{
+    left: 0;
+    top: 270px;
+}
+.tools{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    width:max-content;
+    max-width: 50vw;
+}
+.tool{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em 1em;
+    background-color: #ffffff;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.75rem;
+}
+.tool:hover{
+    background-color: #d3d3d3;
+}
+.tool img{
+    flex-basis: 0;
+}
+.color,.custom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+.color_bucket{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px rgb(46, 41, 41);
+    border: none;
+}
+.red_color_bucket{
+
+    background-color: rgb(255, 87, 87);
+}
+.green_color_bucket{
+    background-color: rgb(53, 240, 53);
+}
+.blue_color_bucket{
+    background-color: rgb(38, 112, 250);
+}
+
+.color_picker{
+    border-radius: 0;
+    background: conic-gradient(
+        from 0deg,
+        rgb(253, 37, 37),
+        rgb(255, 179, 37),
+        rgb(253, 253, 44),
+        rgb(52, 255, 52),
+        rgb(44, 255, 255),
+        rgb(40, 40, 255),
+        rgb(255, 44, 255),
+        rgb(253, 37, 37)
+    );
+}
+.time_description{
+    margin-right: 1em;
+}
+.time_input{
+    width: 35px;
+    appearance: textfield;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    text-align: center;
+}
+.roomId{
+    font-weight: 600;
+    color: rgb(78, 75, 253);
+}
+.join_players{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    /* align-items: center; */
+    overflow-y: auto;
+    height: 100px;
+}
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+
+}
+.player img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.snaps{
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 0.5em;
+    height: 350px;
+    overflow-y: auto ;
+}
+.snap{
+    position: relative;
+    width: 175px;
+    height: 87px;
+}
+.snap:hover .snap__button{
+    display: flex;
+}
+.snap_bg{
+    position: absolute;
+    inset: 0;
+    width: 175px;
+    height: 87px;
+    /* aspect-ratio: 2/1; */
+    display: block;
+}
+
+.snap__button{
+    display: none;
+    background-color: rgba(221, 219, 219, 0.658);
+    position: absolute;
+    gap: 0.3em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.snap__button:hover{
+    background-color: rgba(182, 179, 179, 0.658);
+}
+.snap__button p{
+    font-size: 0.65rem;
+}
+.download{
+    /* border: 1px solid yellow; */
+    right: -2px;
+    bottom: -2px; 
+}
+.delete{
+    left: 0;
+    bottom: -2px; 
+}
+
+.view{
+    color: black;
+    inset: 0;
+    background-color: rgba(172, 170, 170, 0.74)
+}
+.view p{
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:rgb(36, 36, 36);
+}
+.close_room{
+    width: max-content;
+    padding: 0.5em 1em;
+    background-color: rgb(255, 59, 59);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.close_room a{
+    color: white;
+    font-weight: 600;
+}
+
+.close_room:hover{
+    border: 2px solid rgb(255, 59, 59);
+    background-color: transparent;
+}
+
+.close_room:hover a {
+    color: rgb(255, 59, 59);
+}
+
+.model{
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(134, 134, 134, 0.568);
+}
+.close_room_model{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: auto;
+    background-color: white;
+    padding: 1em 2em;
+    box-shadow: var(--box-shadow);
+}

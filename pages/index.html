@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | MLHelper</title>
+    <!-- fav icon  -->
+    <link rel="icon" type="image/x-icon" href="../src/images/logo.png">
+    <!-- add poppins font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <!-- var css  -->
+    <link rel="stylesheet" href="../styles/var.css">
+    <!-- reset css -->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <!-- nav css  -->
+    <link rel="stylesheet" href="../styles/nav.css">
+    <!-- index css  -->
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <nav>
+        <a href="./index.html">
+            <img src="../src/images/logo.png" alt="logo">
+        </a>
+        <div class="nav-right" id="nav_right">
+            <div class="user_profile">
+                <img src="" alt="" id="profile-picture" class="profile_img">
+                <p class="profile_name" id="profile_name"></p>
+            </div>
+            <ul>
+                <li>
+                    <a href="signIn.html" id="logOut">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="create-join">
+        <div >
+            <a id="createRoomBtn" class="create-room room">
+                <img src="../src/images/create-room.svg" alt="create room">
+                Create a room
+            </a>
+        </div>
+        <div >
+            <a id="joinRoomBtn" class="join-room room">
+                <img src="../src/images/join-room.svg" alt="join room">
+                Join a room
+            </a>
+        </div>
+    </main>
+    <section class="loading_model" id="loading_model">
+        <p id="loading_text">Loading</p>
+    </section>
+    <section id="createRoomLoading" class="createRoomLoading">
+        <div id="createRoomModel" class="createRoomModel" >
+
+
+        </div>
+        <div id="joinRoomModel" class="joinRoomModel" >
+
+            <form id="roomKey_input_form" class="roomKey_input_form">
+                <div>
+                    <label for="roomKey">Enter roomkey:</label>
+                    <input id="roomKey" type="text" aria-label="room-key input" name="roomkey">
+                </div>
+                <p>(*Room-key has 10 characters. Ask the key from room creator.)</p>
+                <button type="submit">Submit</button>
+                <p id="cancel_button" class="cancel_button">Cancel</p>
+                <p id="warning" class="warning">*Room does not exist</p>
+            </form>
+        </div>
+    </section>
+
+</body>
+<!-- firebase cdn -->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBdOiBP5jHmJHZATOcWAJVYGBkTbrag9As",
+        authDomain: "mlhelper-6cc44.firebaseapp.com",
+        projectId: "mlhelper-6cc44",
+        storageBucket: "mlhelper-6cc44.appspot.com",
+        messagingSenderId: "1078072164631",
+        appId: "1:1078072164631:web:05c562ab02bfb32ccab752",
+        measurementId: "G-1HMJ32DFZZ"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+<script src="../functions/createRoom.js" type="module" ></script>
+<script src="../functions/logOut.js" type="module"></script>
+<script src="../functions/index.js" type="module"></script>
+<script src="../custom API/customJoinRoom.js" type="module"></script>
+<script src="../functions/joinRoom.js" type="module"> </script>
+</html>
