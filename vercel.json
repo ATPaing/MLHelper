@@ -1,9 +1,9 @@
 {
     "routes": [
-        { "src": "/", "dest": "/signIn.html" },
-        { "src": "/index.html", "dest": "/index.html" },
-        { "src": "/joinRoom.html", "dest": "/joinRoom.html" },
-        { "src": "/register.html", "dest": "/register.html" },
-        { "src": "/createRoom.html", "dest": "/createRoom.html" }
+        { "src": "/", "dest": "/pages/signIn.html" },
+        { "src": "/index.html", "dest": "/pages/index.html" },
+        { "src": "/joinRoom.html", "dest": "/pages/joinRoom.html" },
+        { "src": "/register.html", "dest": "/pages/register.html" },
+        { "src": "/createRoom.html", "dest": "/pages/createRoom.html" }
     ]
 }
