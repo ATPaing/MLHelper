@@ -1,0 +1,9 @@
+{
+    "routes": [
+        { "src": "/", "dest": "/signIn.html" },
+        { "src": "/index.html", "dest": "/index.html" },
+        { "src": "/joinRoom.html", "dest": "/joinRoom.html" },
+        { "src": "/register.html", "dest": "/register.html" },
+        { "src": "/createRoom.html", "dest": "/createRoom.html" }
+    ]
+}
