@@ -90,7 +90,7 @@ registerForm.addEventListener('submit', async (e) => {
                     profile_img_link: imgLink
                 })
                 .then(() => {
-                    window.location.href = '../pages/signin.html'
+                    window.location.href = '../signin.html'
                 })
             },500)
 
