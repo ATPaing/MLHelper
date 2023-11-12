@@ -4,6 +4,7 @@
         { "src": "/index.html", "dest": "/pages/index.html" },
         { "src": "/joinRoom.html", "dest": "/pages/joinRoom.html" },
         { "src": "/register.html", "dest": "/pages/register.html" },
-        { "src": "/createRoom.html", "dest": "/pages/createRoom.html" }
+        { "src": "/createRoom.html", "dest": "/pages/createRoom.html" },
+        { "src": "/signIn.html", "dest": "/pages/signIn.html" }
     ]
 }
