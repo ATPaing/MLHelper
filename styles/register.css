@@ -1,3 +1,9 @@
+.form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 form{
     background-color: white;
     width: max-content;
