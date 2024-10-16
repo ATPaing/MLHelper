@@ -1,7 +1,4 @@
 form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
     background-color: white;
     width: max-content;
     display: flex;
@@ -12,8 +9,6 @@ form{
     padding: 2em 3em;
     box-shadow: var(--box-shadow);
     border-radius: 3px;
-    translate: -50% -70%;
-    /* width: 750px; */
 }
 form h1{
     color: rgb(41, 185, 12);
@@ -61,11 +56,10 @@ form button:hover{
 }
 .prompt{
     position: absolute;
+    top: 0;
     padding: 1em 2em;
-    left: 50%;
     translate: -50% -100%;
     background-color: rgb(71, 71, 71);
-    /* box-shadow: var(--box-shadow); */
     color: greenyellow;
     border-radius:0 0 5px 5px;
     transition: translate 400ms ease-in;
